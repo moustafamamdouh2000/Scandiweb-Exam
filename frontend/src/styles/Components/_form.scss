@@ -1,0 +1,19 @@
+#product_form {
+   display: flex;
+   flex-direction: column;
+   margin-top: $base-margin * 5;
+   align-items: center;
+   font-family: $font-poppins;
+}
+.input-field {
+   width: 25%;
+   border-radius: 5px;
+   font-size: $font-size-md;
+}
+.input-field:focus {
+   background-color: rgb(229, 223, 223);
+}
+
+.error-message {
+   color: rgb(185, 24, 24);
+}

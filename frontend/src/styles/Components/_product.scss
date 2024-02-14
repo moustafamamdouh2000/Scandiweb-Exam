@@ -1,0 +1,26 @@
+.product-container {
+   box-shadow: $base-box-shadow;
+   background-color: antiquewhite;
+   border-radius: $base-border-radius;
+}
+
+.product-info {
+   margin: $base-margin * 4 $base-margin * 3;
+   font-family: $font-poppins;
+}
+
+.delete-checkbox {
+   margin: $base-margin;
+}
+.delete-checkbox:hover {
+   cursor: pointer;
+}
+
+.product-container:hover {
+   cursor: pointer;
+   background-color: #faebba;
+   .product-label {
+      display: block;
+      cursor: pointer;
+   }
+}

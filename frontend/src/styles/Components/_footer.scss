@@ -1,0 +1,13 @@
+.footer {
+   flex-shrink: 0;
+   text-align: center;
+   font-family: $font-poppins;
+   width: 100%;
+   padding: 20px;
+   box-sizing: border-box;
+   hr {
+      border: $base-border-thickness solid #282829;
+      width: 75%;
+      margin: 10px auto;
+   }
+}

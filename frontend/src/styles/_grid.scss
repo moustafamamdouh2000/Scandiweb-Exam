@@ -1,0 +1,18 @@
+@use "sass:math";
+$grid_columns: 12;
+
+.row {
+   display: flex;
+   flex-flow: row wrap;
+   margin: $base-margin * 10 $base-margin 0 $base-margin;
+   gap: 5px;
+   justify-content: center;
+}
+
+@for $i from 1 through math.div($grid_columns, 2) {
+   .col-#{$i} {
+      box-sizing: border-box;
+      flex-grow: 0;
+      width: math.div($i * 100%, $grid_columns);
+   }
+}

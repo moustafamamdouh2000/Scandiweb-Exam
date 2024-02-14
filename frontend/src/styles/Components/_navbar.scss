@@ -1,0 +1,53 @@
+%button-layout {
+   background-color: #73b3eb;
+   border-radius: $base-border-radius - 5;
+   padding: $base-padding;
+   font-size: $font-size-md;
+   font-family: $font-poppins;
+   color: black;
+   font-weight: 600;
+   margin-right: $base-margin * 1.5;
+}
+%button-hover-layout {
+   background-color: #0d3b69;
+   color: white;
+   cursor: pointer;
+}
+
+.navbar {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   box-shadow: $base-box-shadow;
+   border-radius: $base-border-radius - 5;
+   background-color: aliceblue;
+   .title {
+      margin-left: $base-margin * 1.5;
+      font-family: $font-poppins;
+   }
+   #delete-product-btn {
+      @extend %button-layout;
+   }
+   .link-button {
+      @extend %button-layout;
+   }
+   .save-button {
+      @extend %button-layout;
+   }
+   #delete-product-btn:hover {
+      @extend %button-hover-layout;
+   }
+   .link-button:hover {
+      @extend %button-hover-layout;
+   }
+   .save-button:hover {
+      @extend %button-hover-layout;
+   }
+   .save-button:disabled {
+      background-color: gray;
+      &:hover {
+         color: black;
+      }
+   }
+}
