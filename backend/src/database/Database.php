@@ -13,10 +13,14 @@ class Database
 
     public function __construct()
     {
-        $this->DBHOST = $_ENV["DB_HOST"];
-        $this->DBNAME = $_ENV["DB_NAME"];
-        $this->DBUSER = $_ENV["DB_USER"];
-        $this->DBPASSWORD = $_ENV["DB_PASSWORD"];
+        define("DBHOST", "localhost");
+        define("DBUSER", "test_user");
+        define("DBNAME", "scandiweb");
+        define("DBPASSWORD", "1234");
+        $this->DBHOST = DBHOST;
+        $this->DBUSER = DBUSER;
+        $this->DBNAME = DBNAME;
+        $this->DBPASSWORD = DBPASSWORD;
     }
     private $dbc;
     private function connect()
