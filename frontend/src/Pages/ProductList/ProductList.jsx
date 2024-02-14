@@ -15,7 +15,7 @@ export default function ProductList() {
       fetchData();
    }, [location]);
    const fetchData = () => {
-      fetch("http://46.101.205.247/v1/index.php")
+      fetch("http://64.227.113.89/")
          .then((res) => {
             return res.json();
          })
@@ -32,7 +32,7 @@ export default function ProductList() {
    };
    const deleteProducts = () => {
       if (checkElements.length > 0) {
-         fetch("http://46.101.205.247/v1/index.php", {
+         fetch("http://64.227.113.89/", {
             method: "DELETE",
             body: JSON.stringify(checkElements),
          })
