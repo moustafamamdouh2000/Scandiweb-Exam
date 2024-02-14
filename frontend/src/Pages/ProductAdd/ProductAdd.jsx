@@ -48,7 +48,7 @@ export default function ProductAdd() {
          formData.dimensions =
             formData.height + "x" + formData.width + "x" + formData.length;
          console.log(formData);
-         fetch("http://46.101.205.247/v1/index.php", {
+         fetch("http://64.227.113.89/", {
             method: "POST",
             body: JSON.stringify(formData),
          })
