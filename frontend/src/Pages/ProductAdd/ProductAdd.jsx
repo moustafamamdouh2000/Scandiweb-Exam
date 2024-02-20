@@ -48,8 +48,9 @@ export default function ProductAdd() {
          formData.dimensions =
             formData.height + "x" + formData.width + "x" + formData.length;
          console.log(formData);
-         fetch("http://64.227.113.89/", {
+         fetch("your-backend-url", {
             method: "POST",
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData),
          })
             .then((res) => {
@@ -72,9 +73,6 @@ export default function ProductAdd() {
       let newErrors = {};
       if (!formData) {
          return;
-      }
-      if (formData.sku !== formData.sku.toUpperCase()) {
-         newErrors.sku = "SKU must be all capital letters";
       }
       if (!formData.sku) {
          newErrors.sku = "SKU is required";
@@ -146,7 +144,7 @@ export default function ProductAdd() {
    const rightBtn = () => {
       return (
          <Link to="/">
-            <input type="button" value="Cancel" className="link-button" />
+            <input type="button" value="CANCEL" className="link-button" />
          </Link>
       );
    };

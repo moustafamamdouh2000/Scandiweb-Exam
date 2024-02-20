@@ -15,7 +15,7 @@ export default function ProductList() {
       fetchData();
    }, [location]);
    const fetchData = () => {
-      fetch("http://64.227.113.89/")
+      fetch("your-backend-url")
          .then((res) => {
             return res.json();
          })
@@ -32,7 +32,7 @@ export default function ProductList() {
    };
    const deleteProducts = () => {
       if (checkElements.length > 0) {
-         fetch("http://64.227.113.89/", {
+         fetch("your-backend-url", {
             method: "DELETE",
             body: JSON.stringify(checkElements),
          })
@@ -47,7 +47,7 @@ export default function ProductList() {
    const leftBtn = () => {
       return (
          <Link to="/add-product">
-            <input type="button" value="Add" className="link-button" />
+            <input type="button" value="ADD" className="link-button" />
          </Link>
       );
    };
@@ -56,7 +56,7 @@ export default function ProductList() {
          <input
             id="delete-product-btn"
             type="button"
-            value="Mass delete"
+            value="MASS DELETE"
             onClick={deleteProducts}
          />
       );

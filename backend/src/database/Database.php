@@ -13,10 +13,10 @@ class Database
 
     public function __construct()
     {
-        define("DBHOST", "localhost");
-        define("DBUSER", "test_user");
-        define("DBNAME", "scandiweb");
-        define("DBPASSWORD", "1234");
+        define("DBHOST", "your-host");
+        define("DBUSER", "your-username");
+        define("DBNAME", "your-dbname");
+        define("DBPASSWORD", "your-password");
         $this->DBHOST = DBHOST;
         $this->DBUSER = DBUSER;
         $this->DBNAME = DBNAME;

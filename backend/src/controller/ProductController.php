@@ -33,6 +33,7 @@ class ProductController
     private function post()
     {
         $data = json_decode(file_get_contents('php://input'), true);
+        print_r($data);
         $productType = $data['type'];
         $pathToClass = "MyApp\\models\\" . $productType;
         $product = new $pathToClass($data);

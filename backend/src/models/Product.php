@@ -36,7 +36,7 @@ abstract class Product
             echo "Error: please fill up all the form fields! ";
             return false;
         }
-        if (!preg_match('/^([A-Z0-9]+)$/', $this->sku) || !preg_match('/^([A-Za-z0-9]+)$/', $this->name) || !is_numeric($this->price)) {
+        if (!preg_match('/^([A-Za-z0-9]+)$/', $this->sku) || !preg_match('/^([A-Za-z0-9]+)$/', $this->name) || !is_numeric($this->price)) {
             echo " Error:  the input data format is not correct ";
             return false;
         }
